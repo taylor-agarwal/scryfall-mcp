@@ -15,6 +15,15 @@ dependencies = [
 [project.scripts]
 scryfall-mcp = "scryfall_mcp:main"
 
+[project.optional-dependencies]
+examples = [
+    "deepagents>=0.7.34",
+    "langchain-ollama>=1.1.0",
+    "langchain-openai>=1.7.4",
+    "langchain[mcp]>=1.4.9",
+    "openai>=3.46.0",
+]
+
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
