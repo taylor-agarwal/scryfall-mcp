@@ -16,6 +16,7 @@ def search(q: str, offset: int = 0, limit: int = 60) -> dict:
 
             Common filters include
 
+            - `name` - Card name or substring
             - `c` - Color (uses WUBRG notation, e.g. `w` for white and `u` for blue)
             - `ci` - Color identity
             - `t` - Card types (e.g. `instant` or `fish`)
@@ -28,7 +29,7 @@ def search(q: str, offset: int = 0, limit: int = 60) -> dict:
 
             Examples
 
-            - `fire s:alpha` - Cards with "fire" in their name from the Alpha set
+            - `name:fire s:alpha` - Cards with "fire" in their name from the Alpha set
             - `o:draw t:creature` - Creature cards with "draw" in their text
             - `otag:removal ci<=bw` - Cards that cause removal and have a color identity of blue and/or white and/or colorless
             - `f:standard pow>=3 -c:r` - Cards with power 3 or greater that are legal in standard and are not red (negate conditions with `-`)
