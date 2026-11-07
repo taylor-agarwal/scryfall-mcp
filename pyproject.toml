@@ -7,7 +7,10 @@ authors = [
     { name = "Taylor Agarwal", email = "taylor.agarwal@gmail.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "fastmcp>=4.1.6",
+    "scrython>=3.1.0",
+]
 
 [project.scripts]
 scryfall-mcp = "scryfall_mcp:main"
@@ -15,3 +18,9 @@ scryfall-mcp = "scryfall_mcp:main"
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "ruff>=0.17.4",
+]
